@@ -63,11 +63,28 @@ def meeting(s):
         res = res + added_str
     return res
     
+#######################################################################################
+#A Dict from a string
+The main idea is to count all the occurring characters in a string. If you have a string like aba, then the result should be {'a': 2, 'b': 1}.
+
+What if the string is empty? Then the result should be empty object literal, {}
+
+#Solution#
+
+def count(string):
+    res_dict = {}
+    if string == (''):
+        return res_dict
+    else: 
+        for item in string:
+            if item in res_dict.keys():
+                res_dict[item] = res_dict[item] + 1 
+            else:
+                res_dict[item] = 1
+    return res_dict
 
 
-
-
-
+#######################################################################################
 
 
 
